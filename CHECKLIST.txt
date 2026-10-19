@@ -1,0 +1,17 @@
+CHECKLIST TRIỂN KHAI NHANH
+
+[ ] 1. Sao lưu Apps Script và Sheet hiện tại.
+[ ] 2. Copy apps-script/Code.gs vào dự án Apps Script.
+[ ] 3. Run setupRegistrationSheet.
+[ ] 4. Run createCloudflareApiKey và copy khóa.
+[ ] 5. Deploy Apps Script Web App: Execute as Me, access Anyone.
+[ ] 6. Copy URL /exec.
+[ ] 7. Upload bộ mã đã giải nén lên GitHub.
+[ ] 8. Cloudflare Pages > Connect to Git.
+[ ] 9. Build output directory = public; build command để trống.
+[ ] 10. Thêm APPS_SCRIPT_URL.
+[ ] 11. Thêm APPS_SCRIPT_API_KEY dưới dạng Secret.
+[ ] 12. Redeploy Cloudflare Pages.
+[ ] 13. Test /register/.
+[ ] 14. Pages > Custom domains > Set up a domain.
+[ ] 15. Test lại Google Sheet, email, QR và đăng ký trùng.

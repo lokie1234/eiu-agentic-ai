@@ -1,0 +1,22 @@
+CẬP NHẬT REPOSITORY CLOUDFLARE – 13/10/2026
+
+Các file đã thay đổi:
+- apps-script/Code.gs: chốt giá theo thời điểm ghi Google Sheet, chỉnh email xác nhận.
+- public/index.html: bảng học phí, mốc Early Bird và Lunch break.
+- public/register/index.html: giá linh hoạt theo email/ngày, popup, VietQR.
+- public/assets/tuition-pricing.js: logic hiển thị học phí dùng chung trên Cloudflare.
+- public/assets/unified.js: đồng bộ đoạn mã dự phòng cũ (không được trang hiện tại tải).
+- README.md: cập nhật hướng dẫn kiểm tra học phí.
+
+Mức phí:
+- Trước 00:00 26/10/2026 giờ Việt Nam: bình thường 1.000.000đ; email EIU 500.000đ.
+- Từ 00:00 26/10/2026 giờ Việt Nam: bình thường 2.000.000đ; email EIU 1.000.000đ.
+
+CÁCH TRIỂN KHAI:
+1. Giải nén ZIP; đưa file/thư mục BÊN TRONG Cloudfare--main lên repository GitHub của bạn.
+   Nếu repo đã tồn tại, ghi đè đúng các file đã thay đổi. Không upload file ZIP như một file chạy web.
+2. Quan trọng: copy apps-script/Code.gs sang dự án Google Apps Script đang chạy và tạo NEW VERSION của deployment /exec.
+3. Cloudflare Pages sẽ build lại từ GitHub. Giữ nguyên secrets APPS_SCRIPT_URL, APPS_SCRIPT_API_KEY và cấu hình build: public.
+4. Kiểm tra đăng ký thử, học phí Google Sheet, email, VietQR, mobile và ngày hết hạn.
+
+Lưu ý: JS ở trình duyệt chỉ hỗ trợ hiển thị; backend Apps Script mới là nơi quyết định học phí cuối cùng.

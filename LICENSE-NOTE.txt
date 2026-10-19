@@ -1,0 +1,2 @@
+Mã nguồn triển khai được tạo từ các tệp Google Apps Script do người dùng cung cấp.
+Logo EIU được trích từ dữ liệu Base64 trong Code.gs gốc.

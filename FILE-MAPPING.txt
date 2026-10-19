@@ -1,0 +1,25 @@
+ÁNH XẠ 4 FILE GỐC SANG BỘ CLOUDFLARE
+
+1. Pasted code(1).js
+   -> apps-script/Code.gs
+   Giữ backend cũ và bổ sung doPost/API secret.
+
+2. Pasted code (2).html
+   -> public/index.html
+   Chuyển thành trang tĩnh Cloudflare và bổ sung hiệu ứng Agentic AI.
+
+3. Pasted text (3).txt
+   -> public/register/index.html
+   Giữ form/QR/nội dung; thay google.script.run bằng fetch('/api/register').
+
+4. Pasted code (4)(1).html
+   -> public/demo/leave/index.html
+   -> public/demo/time/index.html
+   -> public/demo/meeting/index.html
+   -> public/demo/overtime/index.html
+   Template động được tách thành 4 trang tĩnh để tải nhanh và dễ triển khai.
+
+File mới:
+- public/_worker.js: Pages Function/Worker kết nối Apps Script.
+- public/assets/logo-eiu.png: logo trích từ Base64 trong Code.gs gốc.
+- README.md: hướng dẫn đầy đủ từ bước 0 đến gắn tên miền.
