@@ -19,7 +19,6 @@ body.demo-overtime {
 
 .is-interactive .app-window {
   overflow: hidden;
-  animation: demoAppEnter 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .is-interactive .app-window::after {
@@ -90,7 +89,6 @@ body.demo-overtime {
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 14%, transparent);
-  animation: demoLivePulse 1.8s ease-in-out infinite;
 }
 
 .interactive-workspace {
@@ -251,7 +249,6 @@ body.demo-overtime {
 
 .demo-form-error.is-visible {
   display: block;
-  animation: demoShake 320ms ease;
 }
 
 .demo-actions {
@@ -283,11 +280,6 @@ body.demo-overtime {
   border: 0;
   background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 72%, var(--navy)));
   box-shadow: 0 12px 24px color-mix(in srgb, var(--accent) 25%, transparent);
-}
-
-.demo-submit:hover,
-.demo-modal-button:hover {
-  translate: 0 -2px;
 }
 
 .demo-submit:disabled {
@@ -390,7 +382,6 @@ body.demo-overtime {
   border-radius: 14px;
   background: color-mix(in srgb, var(--accent) 56%, transparent);
   font-size: 20px;
-  animation: demoIconFloat 3s ease-in-out infinite;
 }
 
 .demo-preview-label {
@@ -504,7 +495,6 @@ body.demo-overtime {
   padding: 9px 10px;
   border-radius: 10px;
   background: #f6f8fa;
-  animation: demoHistoryEnter 360ms ease both;
 }
 
 .demo-history-copy {
@@ -553,7 +543,6 @@ body.demo-overtime {
   padding: 13px 15px;
   visibility: hidden;
   opacity: 0;
-  translate: 0 20px;
   color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 14px;
@@ -562,14 +551,12 @@ body.demo-overtime {
   backdrop-filter: blur(16px);
   transition:
     opacity 240ms ease,
-    translate 340ms cubic-bezier(0.22, 1, 0.36, 1),
     visibility 240ms ease;
 }
 
 .demo-toast.is-visible {
   visibility: visible;
   opacity: 1;
-  translate: 0 0;
 }
 
 .demo-toast-icon {
@@ -629,13 +616,7 @@ body.demo-overtime {
   border-radius: 23px;
   background: var(--white);
   box-shadow: 0 35px 95px rgba(0, 0, 0, 0.42);
-  scale: 0.92;
-  transition: scale 380ms cubic-bezier(0.2, 0.85, 0.32, 1.22);
   text-align: center;
-}
-
-.demo-confirmation.is-open .demo-confirmation-card {
-  scale: 1;
 }
 
 .demo-success-icon {
@@ -709,40 +690,8 @@ body.demo-overtime {
   border: 0 !important;
 }
 
-@keyframes demoAppEnter {
-  from {
-    opacity: 0;
-    transform: translateY(24px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes demoLivePulse {
-  0%, 100% { opacity: 0.45; scale: 0.78; }
-  50% { opacity: 1; scale: 1; }
-}
-
 @keyframes demoSpinner {
   to { transform: rotate(360deg); }
-}
-
-@keyframes demoIconFloat {
-  0%, 100% { translate: 0 0; rotate: -2deg; }
-  50% { translate: 0 -6px; rotate: 3deg; }
-}
-
-@keyframes demoHistoryEnter {
-  from { opacity: 0; translate: 12px 0; }
-  to { opacity: 1; translate: 0 0; }
-}
-
-@keyframes demoShake {
-  0%, 100% { translate: 0 0; }
-  30% { translate: -5px 0; }
-  65% { translate: 5px 0; }
 }
 
 @media (max-width: 850px) {
@@ -820,17 +769,6 @@ body.demo-overtime {
     bottom: 16px;
     left: 16px;
     max-width: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .is-interactive .app-window,
-  .demo-mode-badge::before,
-  .demo-preview-icon,
-  .demo-history-item,
-  .demo-submit-spinner {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
   }
 }
 
