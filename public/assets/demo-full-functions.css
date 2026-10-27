@@ -6,7 +6,6 @@
 
 .is-interactive .menu-item:hover {
   background: rgba(255,255,255,.12);
-  transform: translateX(3px);
 }
 
 .is-interactive .menu-item:focus-visible {
@@ -18,7 +17,6 @@
   min-width: 0;
   padding: 28px 30px 34px;
   color: #102a3c;
-  animation: ff-panel-in .34s ease both;
 }
 
 .ff-panel[hidden],
@@ -94,11 +92,6 @@
   font-size: .83rem;
   font-weight: 850;
   white-space: nowrap;
-}
-
-.ff-btn:hover:not(:disabled),
-.ff-icon-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
 }
 
 .ff-btn:focus-visible,
@@ -247,7 +240,6 @@
 }
 
 .ff-item-card:hover {
-  transform: translateY(-3px);
   border-color: #e4c886;
   box-shadow: 0 17px 34px rgba(23, 53, 70, .11);
 }
@@ -719,7 +711,6 @@
   min-height: 10px;
   border-radius: 8px 8px 2px 2px;
   background: linear-gradient(180deg, #efc665, #b27616);
-  animation: ff-grow-up .55s ease both;
 }
 
 .ff-bar span { color: #768a97; font-size: .65rem; }
@@ -804,11 +795,7 @@
   color: #173447;
   background: #fff;
   box-shadow: 0 35px 90px rgba(5, 21, 31, .35);
-  transform: translateY(18px) scale(.97);
-  transition: transform .25s ease;
 }
-
-.ff-modal.is-open .ff-modal-card { transform: none; }
 
 .ff-modal-close {
   position: absolute;
@@ -883,17 +870,7 @@
 
 .ff-join-room span { color: #7f6b48; font-size: .75rem; overflow-wrap: anywhere; }
 
-@keyframes ff-panel-in {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: none; }
-}
-
-@keyframes ff-grow-up {
-  from { height: 0; }
-}
-
 @media (max-width: 850px) {
-  .is-interactive .menu-item:hover { transform: translateY(-2px); }
   .ff-panel { padding: 23px 20px 28px; }
   .ff-panel-head { flex-direction: column; }
   .ff-head-actions { justify-content: flex-start; }
@@ -936,7 +913,6 @@
   .ff-panel,
   .ff-bar i,
   .ff-modal-card {
-    animation: none !important;
     transition: none !important;
   }
 }

@@ -476,13 +476,6 @@
         0 42px 90px
         rgba(0, 0, 0, 0.44);
 
-      transform:
-        rotateY(-5deg)
-        rotateX(2deg);
-
-      animation:
-        appFloating
-        5.2s ease-in-out infinite;
     }
 
     .browser-bar {
@@ -730,10 +723,6 @@
           var(--gold-600)
         );
 
-      animation:
-        chartGrow
-        1.2s ease both;
-
       transform-origin: bottom;
     }
 
@@ -743,27 +732,22 @@
 
     .chart-column:nth-child(2) {
       height: 55%;
-      animation-delay: 0.08s;
     }
 
     .chart-column:nth-child(3) {
       height: 44%;
-      animation-delay: 0.16s;
     }
 
     .chart-column:nth-child(4) {
       height: 81%;
-      animation-delay: 0.24s;
     }
 
     .chart-column:nth-child(5) {
       height: 67%;
-      animation-delay: 0.32s;
     }
 
     .chart-column:nth-child(6) {
       height: 94%;
-      animation-delay: 0.40s;
     }
 
     .workflow {
@@ -857,9 +841,6 @@
         0 18px 42px
         rgba(0, 0, 0, 0.23);
 
-      animation:
-        toastFloating
-        3.4s ease-in-out infinite;
     }
 
     .toast-icon {
@@ -899,44 +880,6 @@
       color: #73818d;
 
       font-size: 8px;
-    }
-
-    @keyframes appFloating {
-      0%,
-      100% {
-        transform:
-          translateY(0)
-          rotateY(-5deg)
-          rotateX(2deg);
-      }
-
-      50% {
-        transform:
-          translateY(-13px)
-          rotateY(-3deg)
-          rotateX(1deg);
-      }
-    }
-
-    @keyframes toastFloating {
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-7px);
-      }
-    }
-
-    @keyframes chartGrow {
-      from {
-        transform: scaleY(0);
-      }
-
-      to {
-        transform: scaleY(1);
-      }
     }
 
     /* DEMO APPS */
@@ -1021,32 +964,13 @@
 
       box-shadow: var(--shadow-sm);
 
-      animation:
-        demoCardFloating
-        3.4s ease-in-out infinite;
-
       transition:
         transform 0.24s ease,
         box-shadow 0.24s ease,
         border-color 0.24s ease;
     }
 
-    .demo-app-card:nth-child(2) {
-      animation-delay: 0.35s;
-    }
-
-    .demo-app-card:nth-child(3) {
-      animation-delay: 0.70s;
-    }
-
-    .demo-app-card:nth-child(4) {
-      animation-delay: 1.05s;
-    }
-
     .demo-app-card:hover {
-      transform:
-        translateY(-8px)
-        scale(1.02);
 
       border-color:
         rgba(179, 145, 89, 0.55);
@@ -1098,24 +1022,6 @@
 
       font-size: 25px;
 
-      animation:
-        demoIconMoving
-        2.3s ease-in-out infinite;
-    }
-
-    .demo-app-card:nth-child(2)
-    .demo-card-icon {
-      animation-delay: 0.25s;
-    }
-
-    .demo-app-card:nth-child(3)
-    .demo-card-icon {
-      animation-delay: 0.50s;
-    }
-
-    .demo-app-card:nth-child(4)
-    .demo-card-icon {
-      animation-delay: 0.75s;
     }
 
     .demo-app-card h3 {
@@ -1154,46 +1060,6 @@
       font-size: 19px;
       font-weight: 900;
 
-      animation:
-        demoArrowMoving
-        1.3s ease-in-out infinite;
-    }
-
-    @keyframes demoCardFloating {
-      0%,
-      100% {
-        translate: 0 0;
-      }
-
-      50% {
-        translate: 0 -5px;
-      }
-    }
-
-    @keyframes demoIconMoving {
-      0%,
-      100% {
-        transform:
-          translateY(0)
-          rotate(-2deg);
-      }
-
-      50% {
-        transform:
-          translateY(-6px)
-          rotate(3deg);
-      }
-    }
-
-    @keyframes demoArrowMoving {
-      0%,
-      100% {
-        transform: translateX(0);
-      }
-
-      50% {
-        transform: translateX(6px);
-      }
     }
 
     /* BENEFITS */
@@ -1257,8 +1123,6 @@
     }
 
     .benefit-card:hover {
-      transform:
-        translateY(-7px);
 
       box-shadow:
         var(--shadow-lg);
@@ -1285,6 +1149,18 @@
         );
 
       font-size: 23px;
+    }
+
+    .demo-card-icon svg,
+    .benefit-icon svg {
+      width: 26px;
+      height: 26px;
+
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .benefit-number {
@@ -1519,12 +1395,6 @@
         0 14px 28px
         rgba(0, 0, 0, 0.21);
 
-      animation:
-        foodFloating
-        3.1s ease-in-out infinite;
-
-      animation-delay:
-        0.3s;
     }
 
     .lunch-box::before {
@@ -1591,57 +1461,6 @@
 
       font-size: 10px;
       font-weight: 850;
-    }
-
-    @keyframes steamRising {
-      0% {
-        opacity: 0;
-
-        transform:
-          translateY(9px)
-          scale(0.8);
-      }
-
-      45% {
-        opacity: 0.85;
-      }
-
-      100% {
-        opacity: 0;
-
-        transform:
-          translateY(-19px)
-          translateX(5px)
-          scale(1.15);
-      }
-    }
-
-    @keyframes drinkFloating {
-      0%,
-      100% {
-        transform:
-          translateY(0);
-      }
-
-      50% {
-        transform:
-          translateY(-5px);
-      }
-    }
-
-    @keyframes foodFloating {
-      0%,
-      100% {
-        transform:
-          translateY(0)
-          rotate(0);
-      }
-
-      50% {
-        transform:
-          translateY(-6px)
-          rotate(2deg);
-      }
     }
 
     /* PROGRAM */
@@ -1893,22 +1712,12 @@
 
       cursor: pointer;
 
-      animation:
-        registerFloating
-        2.2s ease-in-out infinite,
-
-        registerPulse
-        2.7s ease-out infinite;
-
       transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
     }
 
     .floating-register:hover {
-      transform:
-        translateY(-5px)
-        scale(1.035);
 
       box-shadow:
         0 24px 52px
@@ -1932,54 +1741,6 @@
       font-size: 22px;
       line-height: 1;
 
-      animation:
-        arrowMoving
-        1.15s ease-in-out infinite;
-    }
-
-    @keyframes registerFloating {
-      0%,
-      100% {
-        translate: 0 0;
-      }
-
-      50% {
-        translate: 0 -8px;
-      }
-    }
-
-    @keyframes registerPulse {
-      0% {
-        box-shadow:
-          0 18px 45px
-          rgba(4, 28, 49, 0.34),
-
-          0 0 0 0
-          rgba(244, 223, 176, 0.48);
-      }
-
-      72%,
-      100% {
-        box-shadow:
-          0 18px 45px
-          rgba(4, 28, 49, 0.34),
-
-          0 0 0 18px
-          rgba(244, 223, 176, 0);
-      }
-    }
-
-    @keyframes arrowMoving {
-      0%,
-      100% {
-        transform:
-          translateX(0);
-      }
-
-      50% {
-        transform:
-          translateX(6px);
-      }
     }
 
     /* RESPONSIVE */
@@ -2077,7 +1838,6 @@
 
       .app-window {
         transform: none;
-        animation: none;
       }
 
       .app-body {
@@ -2218,11 +1978,6 @@
       *,
       *::before,
       *::after {
-        animation-duration:
-          0.01ms !important;
-
-        animation-iteration-count:
-          1 !important;
 
         scroll-behavior:
           auto !important;
@@ -2245,16 +2000,16 @@
       height: 10px;
       border: 2px solid rgba(244, 223, 176, 0.74);
       border-radius: 50%;
+      opacity: 0.5;
       box-shadow:
         0 0 0 8px rgba(244, 223, 176, 0.035),
         0 0 26px rgba(244, 223, 176, 0.40);
-      animation: aiNodePulse 3.8s ease-in-out infinite;
     }
 
     .ai-ambient-node:nth-child(1) { top: 21%; left: 6%; }
-    .ai-ambient-node:nth-child(2) { top: 36%; right: 7%; animation-delay: .7s; }
-    .ai-ambient-node:nth-child(3) { bottom: 15%; left: 37%; animation-delay: 1.4s; }
-    .ai-ambient-node:nth-child(4) { top: 14%; left: 48%; animation-delay: 2.1s; }
+    .ai-ambient-node:nth-child(2) { top: 36%; right: 7%; }
+    .ai-ambient-node:nth-child(3) { bottom: 15%; left: 37%; }
+    .ai-ambient-node:nth-child(4) { top: 14%; left: 48%; }
 
     .ai-ambient-line {
       position: absolute;
@@ -2267,7 +2022,7 @@
           transparent
         );
       transform-origin: left center;
-      animation: aiLineGlow 4.8s ease-in-out infinite;
+      opacity: 0.35;
     }
 
     .ai-ambient-line.line-a {
@@ -2282,7 +2037,6 @@
       right: 8%;
       width: 31%;
       transform: rotate(-13deg);
-      animation-delay: 1s;
     }
 
     .ai-ambient-line.line-c {
@@ -2290,7 +2044,6 @@
       left: 33%;
       width: 34%;
       transform: rotate(-8deg);
-      animation-delay: 2s;
     }
 
     .agent-flow {
@@ -2326,7 +2079,6 @@
     .agent-flow i {
       color: var(--gold-200);
       font-style: normal;
-      animation: agentArrow 1.5s ease-in-out infinite;
     }
 
     .app-scene::after {
@@ -2346,21 +2098,6 @@
       letter-spacing: 1px;
     }
 
-    @keyframes aiNodePulse {
-      0%, 100% { transform: scale(.75); opacity: .35; }
-      50% { transform: scale(1.2); opacity: 1; }
-    }
-
-    @keyframes aiLineGlow {
-      0%, 100% { opacity: .18; transform-origin: center; }
-      50% { opacity: .75; }
-    }
-
-    @keyframes agentArrow {
-      0%, 100% { transform: translateX(0); opacity: .55; }
-      50% { transform: translateX(4px); opacity: 1; }
-    }
-
     @media (max-width: 760px) {
       .agent-flow {
         width: 100%;
@@ -2378,7 +2115,6 @@
 
   </style>
 
-  <link rel="stylesheet" href="/assets/motion.css">
 </head>
 
 <body>
@@ -2445,7 +2181,7 @@
           <div class="hero-notes">
 
             <div class="hero-note">
-              1 ngày · 2 phiên · 6 giờ
+              1 ngày · 2 buổi · 6 giờ
             </div>
 
             <div class="hero-note">
@@ -2651,33 +2387,6 @@
 
         </div>
 
-        <button
-          class="demo-experience-attractor"
-          type="button"
-          data-demo-attractor
-          aria-controls="demoAppGrid"
-          aria-label="Xem bốn Web App tương tác"
-        >
-          <span class="demo-attractor-icon" aria-hidden="true">
-            ✦
-          </span>
-
-          <span class="demo-attractor-copy">
-            <strong>Trải nghiệm ngay Web App tương tác</strong>
-            <small>Chọn một trong 4 ứng dụng và thử thao tác thật</small>
-          </span>
-
-          <span class="demo-attractor-arrow" aria-hidden="true">
-            ↓
-          </span>
-
-          <span class="demo-attractor-cursor" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M5 3.5 19 13l-6.3 1.1L9.5 20 5 3.5Z"></path>
-            </svg>
-          </span>
-        </button>
-
         <div class="demo-app-grid" id="demoAppGrid">
 
           <a
@@ -2690,7 +2399,7 @@
               class="demo-card-icon"
               aria-hidden="true"
             >
-              🗓
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
             </div>
 
             <h3>
@@ -2721,7 +2430,7 @@
               class="demo-card-icon"
               aria-hidden="true"
             >
-              ◷
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
             </div>
 
             <h3>
@@ -2752,7 +2461,7 @@
               class="demo-card-icon"
               aria-hidden="true"
             >
-              ◉
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
 
             <h3>
@@ -2783,7 +2492,7 @@
               class="demo-card-icon"
               aria-hidden="true"
             >
-              ◔
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 22h14M5 2h14M17 22v-4.17a2 2 0 0 0-.59-1.42L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22M7 2v4.17a2 2 0 0 0 .59 1.42L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"/></svg>
             </div>
 
             <h3>
@@ -2838,7 +2547,7 @@
             </span>
 
             <div class="benefit-icon">
-              ✦
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             </div>
 
             <h3>
@@ -2860,7 +2569,7 @@
             </span>
 
             <div class="benefit-icon">
-              ▦
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
             </div>
 
             <h3>
@@ -2882,7 +2591,7 @@
             </span>
 
             <div class="benefit-icon">
-              ↗
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
 
             <h3>
@@ -3004,7 +2713,7 @@
           </div>
 
           <h2>
-            1 ngày · 2 phiên · 6 giờ
+            1 ngày · 2 buổi · 6 giờ
           </h2>
 
           <p>
@@ -3021,7 +2730,7 @@
             <div class="session-header">
 
               <small>
-                Phiên 1 · 3 giờ
+                Buổi 1 · 3 giờ
               </small>
 
               <h3>
@@ -3057,7 +2766,7 @@
             <div class="session-header">
 
               <small>
-                Phiên 2 · 3 giờ
+                Buổi 2 · 3 giờ
               </small>
 
               <h3>
@@ -3156,7 +2865,6 @@
       });
     })();
   </script>
-  <script src="/assets/interactions.js" defer></script>
 
 </body>
 </html>

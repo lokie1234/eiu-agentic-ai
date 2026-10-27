@@ -1,42 +1,26 @@
 # Animation update
 
-This update keeps the existing page copy, pricing, links, registration flow,
-Cloudflare worker, Google Apps Script backend, and demo pages unchanged.
+The site now uses a plain, professional style with almost no motion.
+Page copy, pricing, links, registration flow, Cloudflare worker, and the
+Google Apps Script backend are unchanged.
 
-## Files changed
+## What changed
 
-- `public/index.html`
-  - Loads the shared motion stylesheet and script.
-  - Adds the enhanced EIU student photo as a visual-only section.
-  - Adds inline SVG decorations for AI, education, books, and learning.
-- `public/register/index.html`
-  - Loads the shared motion stylesheet and script only.
-  - Registration fields, validation, payment, QR, and submission code are unchanged.
+- Removed every decorative animation: floating cards and icons, pulsing
+  buttons, moving arrows, the "Trải nghiệm ngay Web App tương tác" button,
+  confetti, hover lift/scale effects, and the 3D tilt on the hero window.
+- Removed `public/assets/motion.css` and `public/assets/interactions.js`
+  (scroll reveals, pointer glow, click ripple) and their includes.
+- Demo app and benefit icons on the home page are simple line icons (SVG)
+  instead of emoji and symbols.
+- "Phiên 1 / Phiên 2" is now "Buổi 1 / Buổi 2", and "2 phiên" is "2 buổi".
 
-## Files added
+## What is kept
 
-- `public/assets/motion.css`
-  - Scroll reveals, hover lift, pointer glow, image tilt, animated AI/education icons,
-    click ripple, lightbox, responsive rules, and reduced-motion support.
-- `public/assets/interactions.js`
-  - Progressive enhancement for scroll, pointer, click, keyboard, and lightbox interactions.
-- `public/assets/eiu-students-learning-enhanced.webp`
-  - Enhanced web-ready student image, optimized to approximately 152 KB.
-
-## Files intentionally unchanged
-
-- `public/_worker.js`
-- `apps-script/Code.gs`
-- `public/demo/leave/index.html`
-- `public/demo/time/index.html`
-- `public/demo/meeting/index.html`
-- `public/demo/overtime/index.html`
-- `public/assets/logo-eiu.png`
-- Existing deployment documentation and configuration files
+- Loading spinners on submit buttons.
+- Short colour, shadow, and opacity transitions on hover, toasts, and dialogs.
 
 ## Deploy
 
-Upload the whole repository to GitHub, or copy the two changed HTML files and
-the three added files into the same paths in the existing repository. Cloudflare
-Pages will deploy them from `public` without a build command.
-
+Upload the whole repository to GitHub. Cloudflare Pages deploys `public`
+without a build command.

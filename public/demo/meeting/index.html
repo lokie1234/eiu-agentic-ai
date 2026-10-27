@@ -174,7 +174,6 @@
       border-radius: 25px;
       background: #f7f9fb;
       box-shadow: 0 40px 95px rgba(0, 0, 0, 0.43);
-      animation: windowFloat 4.2s ease-in-out infinite;
     }
 
     .browser {
@@ -323,7 +322,6 @@
     .calendar-day.selected {
       color: var(--white);
       background: var(--accent);
-      animation: selectedDay 1.6s ease-in-out infinite;
     }
 
     .request-card {
@@ -331,11 +329,6 @@
       padding: 13px;
       border-radius: 13px;
       background: #f5f7f9;
-      animation: requestSlide 3.2s ease-in-out infinite;
-    }
-
-    .request-card:nth-child(2) {
-      animation-delay: 0.5s;
     }
 
     .request-name {
@@ -405,13 +398,13 @@
 
     .hour-hand {
       height: 40px;
-      animation: hourRotate 12s linear infinite;
+      transform: rotate(-60deg);
     }
 
     .minute-hand {
       height: 55px;
       background: var(--accent);
-      animation: minuteRotate 4s linear infinite;
+      transform: rotate(60deg);
     }
 
     .timeline-item {
@@ -439,7 +432,6 @@
       height: 100%;
       border-radius: inherit;
       background: var(--accent);
-      animation: progressMove 3s ease-in-out infinite;
     }
 
     /* MEETING */
@@ -468,12 +460,7 @@
           #e9e6fb,
           #dcd6fa
         );
-      animation: participantPulse 3s ease-in-out infinite;
     }
-
-    .participant:nth-child(2) { animation-delay: 0.4s; }
-    .participant:nth-child(3) { animation-delay: 0.8s; }
-    .participant:nth-child(4) { animation-delay: 1.2s; }
 
     .participant-avatar {
       width: 48px;
@@ -501,12 +488,7 @@
       height: 15px;
       border-radius: 999px;
       background: var(--accent);
-      animation: soundWave 1s ease-in-out infinite;
     }
-
-    .sound-wave span:nth-child(2) { animation-delay: 0.15s; }
-    .sound-wave span:nth-child(3) { animation-delay: 0.30s; }
-    .sound-wave span:nth-child(4) { animation-delay: 0.45s; }
 
     .meeting-note {
       padding: 12px;
@@ -548,7 +530,6 @@
       background: #ffe6a8;
       box-shadow: 0 0 34px rgba(255, 230, 168, 0.45);
       transform: translateX(-50%);
-      animation: moonFloat 3.2s ease-in-out infinite;
     }
 
     .moon::after {
@@ -568,12 +549,11 @@
       height: 4px;
       border-radius: 50%;
       background: var(--white);
-      animation: starBlink 1.5s ease-in-out infinite;
     }
 
     .stars span:nth-child(1) { top: 35px; left: 25px; }
-    .stars span:nth-child(2) { top: 79px; right: 35px; animation-delay: 0.5s; }
-    .stars span:nth-child(3) { top: 135px; left: 39px; animation-delay: 0.9s; }
+    .stars span:nth-child(2) { top: 79px; right: 35px; }
+    .stars span:nth-child(3) { top: 135px; left: 39px; }
 
     .overtime-total {
       position: absolute;
@@ -616,14 +596,13 @@
           var(--accent)
         );
       transform-origin: bottom;
-      animation: barGrow 2.8s ease-in-out infinite;
     }
 
     .bar:nth-child(1) { height: 37%; }
-    .bar:nth-child(2) { height: 65%; animation-delay: 0.2s; }
-    .bar:nth-child(3) { height: 48%; animation-delay: 0.4s; }
-    .bar:nth-child(4) { height: 88%; animation-delay: 0.6s; }
-    .bar:nth-child(5) { height: 72%; animation-delay: 0.8s; }
+    .bar:nth-child(2) { height: 65%; }
+    .bar:nth-child(3) { height: 48%; }
+    .bar:nth-child(4) { height: 88%; }
+    .bar:nth-child(5) { height: 72%; }
 
     .back-button {
       display: inline-flex;
@@ -651,67 +630,7 @@
     }
 
     .back-button:hover {
-      transform: translateY(-3px);
       box-shadow: 0 21px 45px rgba(0, 0, 0, 0.33);
-    }
-
-    @keyframes windowFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-11px); }
-    }
-
-    @keyframes selectedDay {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.13); }
-    }
-
-    @keyframes requestSlide {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(7px); }
-    }
-
-    @keyframes hourRotate {
-      from { transform: rotate(40deg); }
-      to { transform: rotate(400deg); }
-    }
-
-    @keyframes minuteRotate {
-      from { transform: rotate(0); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes progressMove {
-      0%, 100% { width: 68%; }
-      50% { width: 92%; }
-    }
-
-    @keyframes participantPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(0.965); }
-    }
-
-    @keyframes soundWave {
-      0%, 100% { height: 12px; }
-      50% { height: 39px; }
-    }
-
-    @keyframes moonFloat {
-      0%, 100% {
-        transform: translateX(-50%) translateY(0);
-      }
-      50% {
-        transform: translateX(-50%) translateY(-8px);
-      }
-    }
-
-    @keyframes starBlink {
-      0%, 100% { opacity: 0.25; transform: scale(0.7); }
-      50% { opacity: 1; transform: scale(1.4); }
-    }
-
-    @keyframes barGrow {
-      0%, 100% { transform: scaleY(0.88); }
-      50% { transform: scaleY(1); }
     }
 
     @media (max-width: 650px) {
@@ -786,15 +705,6 @@
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-    }
-
     /* CLOUDFLARE EDITION — AI VISUAL ENHANCEMENTS */
 
     .demo-ai-ambient {
@@ -813,13 +723,12 @@
       box-shadow:
         0 0 0 8px rgba(244, 223, 176, .03),
         0 0 24px rgba(244, 223, 176, .30);
-      animation: demoAmbientPulse 4s ease-in-out infinite;
     }
 
     .demo-ai-ambient span:nth-child(1) { top: 13%; left: 8%; }
-    .demo-ai-ambient span:nth-child(2) { top: 28%; right: 8%; animation-delay: .8s; }
-    .demo-ai-ambient span:nth-child(3) { bottom: 12%; left: 20%; animation-delay: 1.6s; }
-    .demo-ai-ambient span:nth-child(4) { bottom: 22%; right: 18%; animation-delay: 2.4s; }
+    .demo-ai-ambient span:nth-child(2) { top: 28%; right: 8%; }
+    .demo-ai-ambient span:nth-child(3) { bottom: 12%; left: 20%; }
+    .demo-ai-ambient span:nth-child(4) { bottom: 22%; right: 18%; }
 
     .app-window::after {
       content: "AI AGENT ACTIVE";
@@ -835,17 +744,6 @@
       font-weight: 900;
       letter-spacing: .7px;
       box-shadow: 0 8px 20px rgba(8, 41, 69, .10);
-      animation: agentBadgePulse 2.3s ease-in-out infinite;
-    }
-
-    @keyframes demoAmbientPulse {
-      0%, 100% { transform: scale(.75); opacity: .25; }
-      50% { transform: scale(1.2); opacity: 1; }
-    }
-
-    @keyframes agentBadgePulse {
-      0%, 100% { transform: translateY(0); opacity: .72; }
-      50% { transform: translateY(-3px); opacity: 1; }
     }
 
   </style>
